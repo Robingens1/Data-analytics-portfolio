@@ -41,6 +41,7 @@ To simulate an active adversary attempting unauthorized access, an automated dic
 ```bash
 hydra -l non_existent_user -P /usr/share/wordlists/fasttrack.txt ssh://127.0.0.1 -t 4 -V
 ```
+<img width="1050" height="458" alt="image" src="https://github.com/user-attachments/assets/c6658577-11a5-4ecf-bfaa-df73a740735a" />
 
 The attack rapidly flooded the authentication subsystem, generating sequence login failures by cycling passwords against a non-existent user profile to trigger detection thresholds.
 
@@ -82,3 +83,5 @@ To mitigate this vector in a real-world enterprise environment, the following co
 1. **Implement Account Lockout Policies:** Configure `faillock` on the Linux endpoint to temporarily freeze user accounts after 5 consecutive failed attempts.
 2. **Deploy Fail2ban:** Automatically block network traffic at the firewall layer (iptables) for source IPs generating excessive Rule 5710/2502 triggers.
 3. **Enforce Public Key Authentication:** Disable password authentication entirely in `/etc/ssh/sshd_config` and change the default SSH port (22) to a non-standard port to reduce automated noise.
+4. **Restrict SSH User Access:** Modify `/etc/ssh/sshd_config` to include the `AllowUsers` directive (e.g., `AllowUsers safeuser`). This ensures that even if a threat actor guesses a password for an account like `robinson`, the SSH daemon will explicitly drop the connection unless that specific username is pre-whitelisted.
+
