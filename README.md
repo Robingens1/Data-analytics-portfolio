@@ -24,6 +24,8 @@ To deploy an enterprise-grade SIEM solution (Wazuh) to monitor a Linux endpoint,
 3. Installed the `.deb` Wazuh agent package on the Kali Linux endpoint.
 4. Verified that the agent successfully connected to the manager and began streaming logs over the local NAT subnet.
 
+<img width="1164" height="601" alt="image" src="https://github.com/user-attachments/assets/1c5f04c3-d3ef-46e5-8e16-84959e7c442a" />
+
 <img width="1363" height="593" alt="Wazuh_ThreatHunt_Dashboard_B4-Attack" src="https://github.com/user-attachments/assets/9025cb48-c2e5-481d-a86c-d27bd6a1aa8d" />
 
 <img width="814" height="512" alt="image" src="https://github.com/user-attachments/assets/aae1c303-f1ee-4300-894a-100f4586cfa1" />
