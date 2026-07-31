@@ -42,6 +42,10 @@ To simulate an active adversary attempting unauthorized access, an automated dic
 hydra -l non_existent_user -P /usr/share/wordlists/fasttrack.txt ssh://127.0.0.1 -t 4 -V
 ```
 <img width="1050" height="458" alt="image" src="https://github.com/user-attachments/assets/c6658577-11a5-4ecf-bfaa-df73a740735a" />
+<img width="1366" height="553" alt="image" src="https://github.com/user-attachments/assets/26163ebf-aab2-4775-858a-e1c21953f837" />
+<img width="1366" height="633" alt="image" src="https://github.com/user-attachments/assets/914447cc-dc68-44aa-95a2-3fc6656ad166" />
+
+*Caption: Kali Linux terminal output confirming local IP configuration, wordlist generation, and successful threat simulation utilizing THC Hydra against the target SSH service via a 5-line dictionary attack payload.*
 
 The attack rapidly flooded the authentication subsystem, generating sequence login failures by cycling passwords against a non-existent user profile to trigger detection thresholds.
 
