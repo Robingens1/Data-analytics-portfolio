@@ -26,19 +26,22 @@ To establish our modeling variables, we extract and inventory the raw feature sp
 ### 🎯 Programmatic Feature Isolation
 Using a targeted keyword filter script, we map specific metadata tokens down to an optimized subset of engineering parameters. This eliminates column clutter and leaves us with clean target arrays (`collision_severity`), spatial components (`latitude`/`longitude`), and structural factors (`road_type`, `speed_limit`).
 
-![Targeted Feature Filtering]<img width="584" height="465" alt="targeted_feature_filtering png" src="https://github.com/user-attachments/assets/440d7a8e-d93a-4f72-89cf-5df007631572" />
+![Targeted Feature Filtering]
+<img width="584" height="465" alt="targeted_feature_filtering png" src="https://github.com/user-attachments/assets/440d7a8e-d93a-4f72-89cf-5df007631572" />
 
 
 ### 🧮 Null-Value Audit & Target Distribution Mapping
 Before transforming features, we evaluate structural missing values and profile our target class balance. The data displays 0 structural null cells, but reveals a highly skewed target layout containing 74,881 slight incidents versus 26,644 combined serious and fatal outcomes. This directly informs our down-stream machine learning class-weight balancing strategies.
 
-![Null Value and Target Distribution]<img width="526" height="497" alt="null_value_and_target_distribution png" src="https://github.com/user-attachments/assets/e42badaf-c26d-441d-8ae4-3303286b6f3a" />
+![Null Value and Target Distribution]
+<img width="526" height="497" alt="null_value_and_target_distribution png" src="https://github.com/user-attachments/assets/e42badaf-c26d-441d-8ae4-3303286b6f3a" />
 
 
 ### 🕵️ Metadata Diagnostics & Hidden Placeholder Auditing
 To ensure data integrity, we programmatically audit the unique arrays of our categorical features. This step evaluates whether missing entries are masked as standard numbers. The diagnostics successfully uncover hidden missing value placeholders (`-1`) within `light_conditions` and `road_surface_conditions`, allowing us to clean them before performing core analytics.
 
-![Categorical Placeholder Audit]<img width="677" height="425" alt="categorical_placeholder_audit png" src="https://github.com/user-attachments/assets/2460f29b-c2f2-427c-9811-306be677a87f" />
+![Categorical Placeholder Audit]
+<img width="677" height="425" alt="categorical_placeholder_audit png" src="https://github.com/user-attachments/assets/2460f29b-c2f2-427c-9811-306be677a87f" />
 
 
 ---
@@ -48,12 +51,14 @@ To ensure data integrity, we programmatically audit the unique arrays of our cat
 ### 🔗 Placeholder Filtration & Base-Rate Analytics
 We systematically purge the hidden missing metadata placeholders (`-1`) across all critical analytical columns to ensure pure baseline evaluations. Post-filtration, the pipeline branches into cross-tabulation arrays (`pd.crosstab`) to establish foundational, non-skewed risk proportions across varied light profiles and infrastructure shapes.
 
-![Placeholder Filtration and Crosstab]<img width="633" height="510" alt="placeholder_filtration_and_crosstab png1" src="https://github.com/user-attachments/assets/c55f603c-65d0-4bde-b6d6-072031d8e6a2" />
+![Placeholder Filtration and Crosstab]
+<img width="633" height="510" alt="placeholder_filtration_and_crosstab png1" src="https://github.com/user-attachments/assets/c55f603c-65d0-4bde-b6d6-072031d8e6a2" />
 
 ### 🔢 Quantitative Base-Rate Risk Profiles
 After scrubbing missing placeholders, the clean workspace holds 100,877 highly structured records. Executing percentage-normalized cross-tabulations maps structural base-rates for injuries. The resulting distribution mathematically proves that darkness without illumination (Index 6: 4.70% Fatal, 31.55% Serious) and standard single-lane links (Index 6: 1.52% Fatal, 26.52% Serious) hold heavily concentrated crash injury severity rates.
 
-![Crosstab Percentage Outputs]<img width="457" height="470" alt="crosstab_percentage_outputs png2" src="https://github.com/user-attachments/assets/343e6e66-78be-4106-9948-389ebbb43690" />
+![Crosstab Percentage Outputs]
+<img width="457" height="470" alt="crosstab_percentage_outputs png2" src="https://github.com/user-attachments/assets/343e6e66-78be-4106-9948-389ebbb43690" />
 
 
 ### ⚙️ Binary Target Engineering & Dummy Encoding
@@ -65,13 +70,15 @@ To transition into classification modeling, the framework converts the multi-cla
 ### 🧠 Model Ingestion, Training & Performance Report
 The pipeline uses a stratified train/test split configuration to partition 20% of the dataset as a complete out-of-sample evaluation pool. To account for heavy class imbalances between slight and severe crash outcomes, we introduce balanced class weighting into our Logistic Regression algorithm. This ensures our model correctly penalizes misclassifications on life-threatening severe injuries.
 
-![Model Training and Evaluation]<img width="618" height="381" alt="1-model_training_and_evaluation png" src="https://github.com/user-attachments/assets/3e098cb6-97c1-4201-8f56-4addb63f08c8" />
+![Model Training and Evaluation]
+<img width="618" height="381" alt="1-model_training_and_evaluation png" src="https://github.com/user-attachments/assets/3e098cb6-97c1-4201-8f56-4addb63f08c8" />
 
 
 ### 📊 Out-of-Sample Performance Metrics
 To gauge the robustness of our predictive framework, we evaluate the classification output against our hidden test set. While standard baseline predictors struggle with massive imbalance gaps, our class-weighted logistic engine secures a 0.77 precision on minor incidents and successfully flags nearly half of all critical life-threatening injuries (Recall: 0.48), producing a comprehensive, verifiable evaluation log.
 
-![Classification Report Metrics]<img width="579" height="343" alt="2-classification_report_metrics png" src="https://github.com/user-attachments/assets/936dfa15-7b78-4c9d-97ea-bc423613a0e6" />
+![Classification Report Metrics]
+<img width="579" height="343" alt="2-classification_report_metrics png" src="https://github.com/user-attachments/assets/936dfa15-7b78-4c9d-97ea-bc423613a0e6" />
 
 
 ### 🧮 Mathematical Odds Ratio Extraction
