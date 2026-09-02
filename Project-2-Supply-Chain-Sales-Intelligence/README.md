@@ -116,7 +116,8 @@ The implementation of the **Supply Chain & Sales Intelligence System** demonstra
 
 Based on the operational insights surfaced by the dashboard workspace, leadership should implement the following strategic supply chain adjustments:
 
-**Vendor Service Level Agreement (SLA) Renegotiation:** Procurement teams must prioritize re-negotiating turnaround timelines and contract terms with **Gamma Corp**. Their documented average delivery delay of **8.38 days** accounts for **516 high-priority stockout risks**, making them the primary source of supply chain friction.
-**Capital Reallocation via ABC Segmentation:** Operations should immediately reduce safety stock holding thresholds for **Class C** long-tail items. Liquidating or reducing orders on slow-moving inventory optimizes working capital, freeing up cash flow to fully back your high-velocity, high-margin **Class A** revenue lines.
-**Safety Stock Buffer Adjustments:** For Class A items with high seasonal demand variations (as clearly mapped on the trend chart), reorder point boundaries should be dynamically scaled up by **15%** during peak sales months to build a buffer and prevent costly revenue leakage from stockouts.
+*   **Vendor Service Level Agreement (SLA) Renegotiation:** Procurement teams must prioritize re-negotiating turnaround timelines and contract terms with **Gamma Corp**. Their documented average delivery delay of **8.38 days** accounts for **516 high-priority stockout risks**, making them the primary source of supply chain friction.
+*   **Capital Reallocation via ABC Segmentation:** Operations should immediately reduce safety stock holding thresholds for **Class C** long-tail items. Liquidating or reducing orders on slow-moving inventory optimizes working capital, freeing up cash flow to fully back your high-velocity, high-margin **Class A** revenue lines.
+*   **Safety Stock Buffer Adjustments:** For Class A items with high seasonal demand variations (as clearly mapped on the trend chart), reorder point boundaries should be dynamically scaled up by **15%** during peak sales months to build a buffer and prevent costly revenue leakage from stockouts.
+
 
