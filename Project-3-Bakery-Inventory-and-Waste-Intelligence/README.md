@@ -221,6 +221,10 @@ During the initial structural visualization setup, single-column relationships c
 ## 📊 Phase 6: Executive Reporting Dashboard & Interface Design
 <img width="1011" height="568" alt="05_Final_Power_BI_Executive_Dashboard" src="https://github.com/user-attachments/assets/69584990-fb18-4045-9fe9-12b5306771db" />
 
+<img width="908" height="279" alt="image" src="https://github.com/user-attachments/assets/3ffdb14f-2755-4b0a-92f3-7898b3ed7678" />
+
+<img width="1040" height="400" alt="image" src="https://github.com/user-attachments/assets/6c29a855-1ca1-42d6-90c0-1100d745a437" />
+
 The final presentation canvas delivers an intuitive command console for leadership, tracking key performance parameters seamlessly:
 
 * **Operational High-Level Cards:** Grouped global metric calculations (`Total Produced`, `Total Sold`, and `Total Wasted`) at the top row for a quick snapshot of overall performance.
