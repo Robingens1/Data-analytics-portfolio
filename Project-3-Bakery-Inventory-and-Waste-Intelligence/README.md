@@ -32,7 +32,7 @@ The pipeline mirrors a modern production framework, routing data from raw manual
 ## ⚙️ 3. Comprehensive Pipeline Phases & Implementation
 
 ### Phase 1: Data Ingestion & Google Sheets Origin
-To establish a rigorous, realistic benchmarking framework, data running from **March 2026 to August 2026** was established. The inventory spans 5 primary product lines: *Croissant, Sourdough Bread, Chocolate Pastry, Baguette, and Cinnamon Roll*. 
+To establish a rigorous, realistic benchmarking framework, data running from **March 2026 to August 2026** was established. The inventory spans 5 primary product lines: *Croissant, Sourdough Bread, Chocolate Pastry, Baguette, and Cinnamon Roll*.
 
 Staff input daily figures into three separate tabs within a workbook named `Golden_Crust_Bakery_Data.xlsx`:
 1. `Production_Logs`: Daily targets baked per item.
@@ -40,8 +40,7 @@ Staff input daily figures into three separate tabs within a workbook named `Gold
 3. `Waste_Logs`: Physical scraps discarded at close of business.
 
 #### Project Artifact:
-![00_Raw_Spreadsheet_Data_Source]
-<img width="516" height="641" alt="00_Raw_Spreadsheet_Data_Source png" src="https://github.com/user-attachments/assets/5d819ed1-75b3-44be-ab0e-2e056af56e8b" />
+<img width="516" height="641" alt="00_Raw_Spreadsheet_Data_Source" src="https://github.com/user-attachments/assets/5d819ed1-75b3-44be-ab0e-2e056af56e8b" />
 
 ---
 
@@ -122,9 +121,7 @@ print("Pipeline data generation completed successfully.")
 ```
 
 #### Project Artifact:
-![01_Python_Data_Generation_Pipeline]
-<img width="1209" height="388" alt="01_Python_Data_Generation_Pipeline png" src="https://github.com/user-attachments/assets/c5ee7881-2ea4-4a63-a50d-a6a1624b18b3" />
-
+<img width="1209" height="388" alt="01_Python_Data_Generation_Pipeline" src="https://github.com/user-attachments/assets/c5ee7881-2ea4-4a63-a50d-a6a1624b18b3" />
 
 ---
 
@@ -157,9 +154,7 @@ conn.close()
 ```
 
 #### Project Artifact:
-![02_Python_to_SQL_ETL_Pipeline]
-<img width="931" height="397" alt="02_Python_to_SQL_ETL_Pipeline png" src="https://github.com/user-attachments/assets/a810fbe1-2795-4cf5-9fd8-53ce7a947991" />
-
+<img width="931" height="397" alt="02_Python_to_SQL_ETL_Pipeline" src="https://github.com/user-attachments/assets/a810fbe1-2795-4cf5-9fd8-53ce7a947991" />
 
 ---
 
@@ -204,14 +199,15 @@ ORDER BY
         WHEN 'Sunday' THEN 7
     END, 
     SUM(w.Quantity_Wasted) DESC;
+```
 
-![03_SQL_Data_Aggregation_and_Analysis]
-<img width="982" height="495" alt="03_SQL_Data_Aggregation_and_Analysis png" src="https://github.com/user-attachments/assets/6cc1c582-4a3f-449d-ba1b-635a73e7ea91" />
+#### Project Artifact:
+<img width="982" height="495" alt="03_SQL_Data_Aggregation_and_Analysis" src="https://github.com/user-attachments/assets/6cc1c582-4a3f-449d-ba1b-635a73e7ea91" />
 
-# Golden Crust Bakery: Data Optimization & Analytics Pipeline
+---
 
 ## 🛠️ Phase 5: Power BI Modeling & Optimization
-![04_Power_BI_Data_Ingestion_and_Modeling] !<img width="803" height="279" alt="04_Power_BI_Data_Ingestion_and_Modeling png" src="https://github.com/user-attachments/assets/54b199df-b99e-4956-8d52-155e088a0b07" />
+<img width="803" height="279" alt="04_Power_BI_Data_Ingestion_and_Modeling" src="https://github.com/user-attachments/assets/54b199df-b99e-4956-8d52-155e088a0b07" />
 
 During the initial structural visualization setup, single-column relationships created many-to-many ambiguity errors and inactive, broken filtering paths (dotted relationship lines). This caused dashboard charts to loop flat, identical totals across different categories.
 
@@ -223,8 +219,7 @@ During the initial structural visualization setup, single-column relationships c
 ---
 
 ## 📊 Phase 6: Executive Reporting Dashboard & Interface Design
-![05_Final_Power_BI_Executive_Dashboard]
-<img width="1011" height="568" alt="05_Final_Power_BI_Executive_Dashboard png" src="https://github.com/user-attachments/assets/69584990-fb18-4045-9fe9-12b5306771db" />
+<img width="1011" height="568" alt="05_Final_Power_BI_Executive_Dashboard" src="https://github.com/user-attachments/assets/69584990-fb18-4045-9fe9-12b5306771db" />
 
 The final presentation canvas delivers an intuitive command console for leadership, tracking key performance parameters seamlessly:
 
@@ -248,4 +243,3 @@ Based on the patterns uncovered by this analytics pipeline, Golden Crust Bakery 
 Through this project, a fully unified, modern data ecosystem was successfully implemented for a traditional retail setting. By taking disjointed spreadsheets and engineering a structured, automated pipeline, we successfully transformed raw daily inputs into an actionable, analytical roadmap.
 
 The structural model optimization completed in Power BI via custom composite data keys guarantees that business users see exact, product-specific metrics rather than misleading averages. This optimization saves thousands of items from ending up in disposal bins while maximizing on-shelf product availability during peak weekend sales surges.
-
